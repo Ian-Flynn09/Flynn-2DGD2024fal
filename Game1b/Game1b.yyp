@@ -1,6 +1,6 @@
 {
   "$GMProject":"",
-  "%Name":"Game 1",
+  "%Name":"Game1b",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -32,7 +32,7 @@
   "MetaData":{
     "IDEVersion":"2024.6.2.162",
   },
-  "name":"Game 1",
+  "name":"Game1b",
   "resources":[
     {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
