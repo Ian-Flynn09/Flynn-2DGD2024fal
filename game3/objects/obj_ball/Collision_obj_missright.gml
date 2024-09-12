@@ -18,3 +18,9 @@ obj_scoreboard.p1_score += 1;
 /// @DnDHash : 0EACE7B2
 x = xstart;
 y = ystart;
+
+/// @DnDAction : YoYo Games.Movement.Set_Speed
+/// @DnDVersion : 1
+/// @DnDHash : 286A6FEC
+/// @DnDArgument : "speed" "5"
+speed = 5;

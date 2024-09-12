@@ -18,3 +18,30 @@ y = ystart;
 /// @DnDArgument : "soundid" "Soundwinp2"
 /// @DnDSaveInfo : "soundid" "Soundwinp2"
 audio_play_sound(Soundwinp2, 0, 0, 1.0, undefined, 1.0);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 60B93BC2
+/// @DnDArgument : "expr" "5"
+/// @DnDArgument : "var" "ball_speed"
+ball_speed = 5;
+
+/// @DnDAction : YoYo Games.Movement.Set_Speed
+/// @DnDVersion : 1
+/// @DnDHash : 0A9714A1
+/// @DnDArgument : "speed" "ball_speed"
+speed = ball_speed;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 68D08250
+/// @DnDArgument : "expr" "ball_speed"
+/// @DnDArgument : "var" "obj_paddlelt.paddle_speed"
+obj_paddlelt.paddle_speed = ball_speed;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 4A293BD2
+/// @DnDArgument : "expr" "ball_speed"
+/// @DnDArgument : "var" "obj_paddlert.paddle_speed"
+obj_paddlert.paddle_speed = ball_speed;
