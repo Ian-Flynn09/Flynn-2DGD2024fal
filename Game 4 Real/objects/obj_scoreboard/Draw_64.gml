@@ -20,5 +20,5 @@ draw_text(64, 64, string("Lives:") + string(player_lives));
 /// @DnDArgument : "x" "1230"
 /// @DnDArgument : "y" "64"
 /// @DnDArgument : "caption" ""Score: ""
-/// @DnDArgument : "var" "0"
-draw_text(1230, 64, string("Score: ") + string(0));
+/// @DnDArgument : "var" "Points"
+draw_text(1230, 64, string("Score: ") + string(Points));

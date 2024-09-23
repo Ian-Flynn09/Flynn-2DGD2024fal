@@ -13,3 +13,11 @@ move_outside_all(direction, 100);
 /// @DnDHash : 3CCE7A9A
 /// @DnDApplyTo : other
 with(other) instance_destroy();
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 72839C60
+/// @DnDArgument : "expr" "other.myPoints"
+/// @DnDArgument : "expr_relative" "1"
+/// @DnDArgument : "var" "obj_scoreboard.Points"
+obj_scoreboard.Points += other.myPoints;

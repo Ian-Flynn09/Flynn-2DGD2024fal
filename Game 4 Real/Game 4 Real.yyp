@@ -41,6 +41,7 @@
     {"id":{"name":"obj_green","path":"objects/obj_green/obj_green.yy",},},
     {"id":{"name":"obj_miss","path":"objects/obj_miss/obj_miss.yy",},},
     {"id":{"name":"obj_paddle","path":"objects/obj_paddle/obj_paddle.yy",},},
+    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_pink","path":"objects/obj_pink/obj_pink.yy",},},
     {"id":{"name":"obj_purple","path":"objects/obj_purple/obj_purple.yy",},},
     {"id":{"name":"obj_red","path":"objects/obj_red/obj_red.yy",},},
