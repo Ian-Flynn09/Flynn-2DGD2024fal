@@ -17,8 +17,8 @@ draw_text(64, 64, string("Lives:") + string(player_lives));
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 31A185FC
-/// @DnDArgument : "x" "1230"
+/// @DnDArgument : "x" "1150"
 /// @DnDArgument : "y" "64"
 /// @DnDArgument : "caption" ""Score: ""
 /// @DnDArgument : "var" "Points"
-draw_text(1230, 64, string("Score: ") + string(Points));
+draw_text(1150, 64, string("Score: ") + string(Points));

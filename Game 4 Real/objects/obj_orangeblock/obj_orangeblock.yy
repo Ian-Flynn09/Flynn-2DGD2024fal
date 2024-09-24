@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pink",
+  "%Name":"obj_orangeblock",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pink",
+  "name":"obj_orangeblock",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_pink_block",
-    "path":"sprites/spr_pink_block/spr_pink_block.yy",
+    "name":"spr_orange_block",
+    "path":"sprites/spr_orange_block/spr_orange_block.yy",
   },
   "spriteMaskId":null,
   "visible":true,

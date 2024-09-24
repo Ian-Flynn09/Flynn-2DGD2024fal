@@ -21,6 +21,7 @@
     {"name":"obj_blue","order":7,"path":"objects/obj_blue/obj_blue.yy",},
     {"name":"obj_green","order":5,"path":"objects/obj_green/obj_green.yy",},
     {"name":"obj_miss","order":9,"path":"objects/obj_miss/obj_miss.yy",},
+    {"name":"obj_orangeblock","order":13,"path":"objects/obj_orangeblock/obj_orangeblock.yy",},
     {"name":"obj_paddle","order":1,"path":"objects/obj_paddle/obj_paddle.yy",},
     {"name":"obj_pause","order":12,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"obj_pink","order":2,"path":"objects/obj_pink/obj_pink.yy",},

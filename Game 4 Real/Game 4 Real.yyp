@@ -40,6 +40,7 @@
     {"id":{"name":"obj_blue","path":"objects/obj_blue/obj_blue.yy",},},
     {"id":{"name":"obj_green","path":"objects/obj_green/obj_green.yy",},},
     {"id":{"name":"obj_miss","path":"objects/obj_miss/obj_miss.yy",},},
+    {"id":{"name":"obj_orangeblock","path":"objects/obj_orangeblock/obj_orangeblock.yy",},},
     {"id":{"name":"obj_paddle","path":"objects/obj_paddle/obj_paddle.yy",},},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_pink","path":"objects/obj_pink/obj_pink.yy",},},
