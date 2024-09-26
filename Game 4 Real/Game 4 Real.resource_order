@@ -31,6 +31,7 @@
     {"name":"obj_wall","order":8,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"obj_yellow","order":6,"path":"objects/obj_yellow/obj_yellow.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"Room3","order":2,"path":"rooms/Room3/Room3.yy",},
     {"name":"spr_ball","order":16,"path":"sprites/spr_ball/spr_ball.yy",},
     {"name":"spr_green_block","order":18,"path":"sprites/spr_green_block/spr_green_block.yy",},
     {"name":"spr_miss","order":24,"path":"sprites/spr_miss/spr_miss.yy",},
