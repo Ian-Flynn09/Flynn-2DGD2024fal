@@ -6,6 +6,13 @@ y = ystart;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
+/// @DnDHash : 3B2E685B
+/// @DnDArgument : "expr" "8"
+/// @DnDArgument : "var" "ball_speed"
+ball_speed = 8;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
 /// @DnDHash : 1F756646
 /// @DnDArgument : "expr" "-1"
 /// @DnDArgument : "expr_relative" "1"

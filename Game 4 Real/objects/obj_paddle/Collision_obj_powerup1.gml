@@ -4,11 +4,16 @@
 /// @DnDApplyTo : {obj_powerup1}
 with(obj_powerup1) instance_destroy();
 
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 1E806374
+instance_destroy();
+
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
-/// @DnDHash : 47222E8B
-/// @DnDArgument : "xpos" "642"
-/// @DnDArgument : "ypos" "53"
-/// @DnDArgument : "objectid" "obj_ball"
-/// @DnDSaveInfo : "objectid" "obj_ball"
-instance_create_layer(642, 53, "Instances", obj_ball);
+/// @DnDHash : 6053AAE1
+/// @DnDArgument : "xpos" "595"
+/// @DnDArgument : "ypos" "639"
+/// @DnDArgument : "objectid" "obj_megapaddle"
+/// @DnDSaveInfo : "objectid" "obj_megapaddle"
+instance_create_layer(595, 639, "Instances", obj_megapaddle);
