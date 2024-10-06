@@ -21,3 +21,10 @@ with(other) instance_destroy();
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "var" "obj_scoreboard.Points"
 obj_scoreboard.Points += other.myPoints;
+
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 09DF332C
+/// @DnDArgument : "soundid" "sndbreak"
+/// @DnDSaveInfo : "soundid" "sndbreak"
+audio_play_sound(sndbreak, 0, 0, 1.0, undefined, 1.0);

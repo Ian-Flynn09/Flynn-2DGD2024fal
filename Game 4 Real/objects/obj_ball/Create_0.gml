@@ -1,14 +1,14 @@
-/// @DnDAction : YoYo Games.Random.Randomize
-/// @DnDVersion : 1
-/// @DnDHash : 28CFDC9B
-randomize();
-
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 53C82952
 /// @DnDArgument : "expr" "7"
 /// @DnDArgument : "var" "ball_speed"
 ball_speed = 7;
+
+/// @DnDAction : YoYo Games.Random.Randomize
+/// @DnDVersion : 1
+/// @DnDHash : 28CFDC9B
+randomize();
 
 /// @DnDAction : YoYo Games.Movement.Set_Direction_Random
 /// @DnDVersion : 1.1

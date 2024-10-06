@@ -1,10 +1,10 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7195A7C4
-/// @DnDArgument : "expr" "8"
+/// @DnDArgument : "expr" "1"
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "var" "ball_speed"
-ball_speed += 8;
+ball_speed += 1;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

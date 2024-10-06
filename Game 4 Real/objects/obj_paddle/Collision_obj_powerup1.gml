@@ -17,3 +17,10 @@ instance_destroy();
 /// @DnDArgument : "objectid" "obj_megapaddle"
 /// @DnDSaveInfo : "objectid" "obj_megapaddle"
 instance_create_layer(595, 639, "Instances", obj_megapaddle);
+
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 4533E5B5
+/// @DnDArgument : "soundid" "sndpowerup"
+/// @DnDSaveInfo : "soundid" "sndpowerup"
+audio_play_sound(sndpowerup, 0, 0, 1.0, undefined, 1.0);
