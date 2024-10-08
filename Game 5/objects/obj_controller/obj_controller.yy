@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objturret2",
+  "%Name":"obj_controller",
   "eventList":[],
   "managed":true,
-  "name":"objturret2",
+  "name":"obj_controller",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_turretparent",
-    "path":"objects/obj_turretparent/obj_turretparent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_turret2",
-    "path":"sprites/spr_turret2/spr_turret2.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
