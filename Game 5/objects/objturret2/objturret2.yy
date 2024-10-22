@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_turret2",
-    "path":"sprites/spr_turret2/spr_turret2.yy",
+    "name":"spr_turret1",
+    "path":"sprites/spr_turret1/spr_turret1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

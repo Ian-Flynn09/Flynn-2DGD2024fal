@@ -34,6 +34,7 @@
   },
   "name":"Game 5",
   "resources":[
+    {"id":{"name":"Fontscoreboard","path":"fonts/Fontscoreboard/Fontscoreboard.yy",},},
     {"id":{"name":"obj_box_unbreakable","path":"objects/obj_box_unbreakable/obj_box_unbreakable.yy",},},
     {"id":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},},
     {"id":{"name":"obj_boxparent","path":"objects/obj_boxparent/obj_boxparent.yy",},},
