@@ -2,9 +2,8 @@
 /// @DnDVersion : 1
 /// @DnDHash : 7DE1FCBD
 /// @DnDArgument : "var" "barrel_rotation"
-/// @DnDArgument : "op" "3"
-/// @DnDArgument : "value" "180"
-if(barrel_rotation <= 180)
+/// @DnDArgument : "op" "2"
+if(barrel_rotation > 0)
 {
 	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
@@ -18,9 +17,9 @@ if(barrel_rotation <= 180)
 		/// @DnDVersion : 1
 		/// @DnDHash : 60463D4F
 		/// @DnDParent : 1DCF6441
-		/// @DnDArgument : "expr" "rotation_speed"
+		/// @DnDArgument : "expr" "-rotation_speed"
 		/// @DnDArgument : "expr_relative" "1"
 		/// @DnDArgument : "var" "barrel_rotation"
-		barrel_rotation += rotation_speed;
+		barrel_rotation += -rotation_speed;
 	}
 }
