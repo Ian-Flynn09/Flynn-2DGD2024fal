@@ -1,5 +1,39 @@
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
+/// @DnDHash : 0ACF5E15
+/// @DnDArgument : "font" "Fontrealscoreboard"
+/// @DnDSaveInfo : "font" "Fontrealscoreboard"
+draw_set_font(Fontrealscoreboard);
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 71C21862
+/// @DnDArgument : "var" "transitioning"
+/// @DnDArgument : "value" "true"
+if(transitioning == true)
+{
+	/// @DnDAction : YoYo Games.Drawing.Set_Color
+	/// @DnDVersion : 1
+	/// @DnDHash : 47193CD9
+	/// @DnDParent : 71C21862
+	/// @DnDArgument : "color" "$FF025C06"
+	draw_set_colour($FF025C06 & $ffffff);
+	var l47193CD9_0=($FF025C06 >> 24);
+	draw_set_alpha(l47193CD9_0 / $ff);
+
+	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+	/// @DnDVersion : 1
+	/// @DnDHash : 7219D1EB
+	/// @DnDParent : 71C21862
+	/// @DnDArgument : "x" "room_width/2"
+	/// @DnDArgument : "y" "150"
+	/// @DnDArgument : "caption" ""Shots Fired ""
+	/// @DnDArgument : "var" "shots_fired"
+	draw_text(room_width/2, 150, string("Shots Fired ") + string(shots_fired));
+}
+
+/// @DnDAction : YoYo Games.Drawing.Set_Font
+/// @DnDVersion : 1
 /// @DnDHash : 3B9B8741
 /// @DnDArgument : "font" "Fontrealscoreboard"
 /// @DnDSaveInfo : "font" "Fontrealscoreboard"
