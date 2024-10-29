@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fire",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_air",
+  "eventList":[],
   "managed":true,
-  "name":"obj_fire",
+  "name":"obj_air",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_fire",
-    "path":"sprites/spr_fire/spr_fire.yy",
+    "name":"spr_air",
+    "path":"sprites/spr_air/spr_air.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
