@@ -154,6 +154,14 @@ else
 		/// @DnDArgument : "y" "80"
 		/// @DnDArgument : "caption" ""Player Two Won""
 		draw_text(room_width /2, 80, string("Player Two Won") + "");
+	
+		/// @DnDAction : YoYo Games.Audio.Play_Audio
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 03ADDBD6
+		/// @DnDParent : 59C6D991
+		/// @DnDArgument : "soundid" "snd_win"
+		/// @DnDSaveInfo : "soundid" "snd_win"
+		audio_play_sound(snd_win, 0, 0, 1.0, undefined, 1.0);
 	}
 
 	/// @DnDAction : YoYo Games.Common.Else
@@ -187,6 +195,14 @@ else
 			/// @DnDArgument : "y" "80"
 			/// @DnDArgument : "caption" ""Player One Won ""
 			draw_text(room_width /2, 80, string("Player One Won ") + "");
+		
+			/// @DnDAction : YoYo Games.Audio.Play_Audio
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 5608D0E4
+			/// @DnDParent : 7AB72AD9
+			/// @DnDArgument : "soundid" "snd_win"
+			/// @DnDSaveInfo : "soundid" "snd_win"
+			audio_play_sound(snd_win, 0, 0, 1.0, undefined, 1.0);
 		}
 	}
 }

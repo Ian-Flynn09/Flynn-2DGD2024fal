@@ -23,3 +23,10 @@ speed = obj_strength.strength / divider;
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "var" "obj_controller.shots_fired"
 obj_controller.shots_fired += 1;
+
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 30D7CC0D
+/// @DnDArgument : "soundid" "snd_fire"
+/// @DnDSaveInfo : "soundid" "snd_fire"
+audio_play_sound(snd_fire, 0, 0, 1.0, undefined, 1.0);
