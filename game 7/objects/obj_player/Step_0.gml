@@ -1,11 +1,19 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 7A5071F9
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)// Step Event - Based on Input$(13_10)if (keyboard_check(vk_right)) {$(13_10)    sprite_index = spr_walkright;$(13_10)    x += my_speed; // Move right$(13_10)} else if (keyboard_check(vk_left)) {$(13_10)    sprite_index = spr_walkleft;$(13_10)    x -= my_speed; // Move left$(13_10)} else if (keyboard_check(vk_up)) {$(13_10)    sprite_index = spr_walkup;$(13_10)    y -= my_speed; // Move up$(13_10)} else if (keyboard_check(vk_down)) {$(13_10)    sprite_index = spr_walkdown;$(13_10)    y += my_speed; // Move down$(13_10)} else {$(13_10)    sprite_index = spr_idle; // Set idle sprite$(13_10)}$(13_10)"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)// Step Event - Based on Input$(13_10)if (keyboard_check(vk_right)) {$(13_10)	if(attacking){$(13_10)		sprite_index = spr_swingright;}$(13_10)	else{$(13_10)		sprite_index = spr_walkright;}$(13_10)		 $(13_10)			sprite_index = spr_swingleft;$(13_10)			else{  $(13_10)				sprite_index = spr_walkleft;}$(13_10)				$(13_10)    x += my_speed; // Move right$(13_10)} else if (keyboard_check(vk_left)) {$(13_10)    sprite_index = spr_walkleft;$(13_10)    x -= my_speed; // Move left$(13_10)} else if (keyboard_check(vk_up)) {$(13_10)    sprite_index = spr_walkup;$(13_10)    y -= my_speed; // Move up$(13_10)} else if (keyboard_check(vk_down)) {$(13_10)    sprite_index = spr_walkdown;$(13_10)    y += my_speed; // Move down$(13_10)} else {$(13_10)    sprite_index = spr_idle; // Set idle sprite$(13_10)}$(13_10)"
 /// @description Execute Code
 // Step Event - Based on Input
 if (keyboard_check(vk_right)) {
-    sprite_index = spr_walkright;
+	if(attacking){
+		sprite_index = spr_swingright;}
+	else{
+		sprite_index = spr_walkright;}
+		 
+			sprite_index = spr_swingleft;
+			else{  
+				sprite_index = spr_walkleft;}
+				
     x += my_speed; // Move right
 } else if (keyboard_check(vk_left)) {
     sprite_index = spr_walkleft;
@@ -38,4 +46,23 @@ if (keyboard_check_pressed(ord("E"))) {
             show_message("The door is locked. You need a key!");
         }
     }
+}
+
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 48B6C7F9
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)// Step Event: Update Direction$(13_10)if (!attacking) { // Only change direction if not attacking$(13_10)    if (keyboard_check(vk_up)) {$(13_10)        my_direction = "up";$(13_10)    } else if (keyboard_check(vk_down)) {$(13_10)        my_direction = "down";$(13_10)    } else if (keyboard_check(vk_left)) {$(13_10)        my_direction = "left";$(13_10)    } else if (keyboard_check(vk_right)) {$(13_10)        my_direction = "right";$(13_10)    }$(13_10)	show_debug_message(direction);$(13_10)}$(13_10)"
+/// @description Execute Code
+// Step Event: Update Direction
+if (!attacking) { // Only change direction if not attacking
+    if (keyboard_check(vk_up)) {
+        my_direction = "up";
+    } else if (keyboard_check(vk_down)) {
+        my_direction = "down";
+    } else if (keyboard_check(vk_left)) {
+        my_direction = "left";
+    } else if (keyboard_check(vk_right)) {
+        my_direction = "right";
+    }
+	show_debug_message(direction);
 }
