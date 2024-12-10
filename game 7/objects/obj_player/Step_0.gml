@@ -1,31 +1,42 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 7A5071F9
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)// Step Event - Based on Input$(13_10)if (keyboard_check(vk_right)) {$(13_10)	if(attacking){$(13_10)		sprite_index = spr_swingright;}$(13_10)	else{$(13_10)		sprite_index = spr_walkright;}$(13_10)		 $(13_10)			sprite_index = spr_swingleft;$(13_10)			else{  $(13_10)				sprite_index = spr_walkleft;}$(13_10)				$(13_10)    x += my_speed; // Move right$(13_10)} else if (keyboard_check(vk_left)) {$(13_10)    sprite_index = spr_walkleft;$(13_10)    x -= my_speed; // Move left$(13_10)} else if (keyboard_check(vk_up)) {$(13_10)    sprite_index = spr_walkup;$(13_10)    y -= my_speed; // Move up$(13_10)} else if (keyboard_check(vk_down)) {$(13_10)    sprite_index = spr_walkdown;$(13_10)    y += my_speed; // Move down$(13_10)} else {$(13_10)    sprite_index = spr_idle; // Set idle sprite$(13_10)}$(13_10)"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)// Step Event - Based on Input$(13_10)if (keyboard_check(vk_right)) {$(13_10)	if(attacking){$(13_10)		sprite_index = spr_swingright;$(13_10)	$(13_10)	}$(13_10)	else{$(13_10)		sprite_index = spr_walkright;$(13_10)	}$(13_10)}$(13_10)$(13_10)if (keyboard_check(vk_left)) {$(13_10)	if (attacking){$(13_10)		sprite_index = spr_swingleft;$(13_10)		}$(13_10)		else{  $(13_10)			sprite_index = spr_walkleft;$(13_10)		}$(13_10)}$(13_10)$(13_10)if (keyboard_check(vk_up)) {$(13_10)		if(attacking){$(13_10)			sprite_index = spr_swingup;}$(13_10)			else{$(13_10)				sprite_index = spr_walkup;}$(13_10)}		$(13_10)				$(13_10)if (keyboard_check(vk_down)) {$(13_10)	if(attacking){$(13_10)		sprite_index = spr_swingdown;$(13_10)	}$(13_10)	else{$(13_10)		sprite_index = spr_walkdown;$(13_10)	}$(13_10)}$(13_10)   $(13_10)$(13_10)"
 /// @description Execute Code
 // Step Event - Based on Input
 if (keyboard_check(vk_right)) {
 	if(attacking){
-		sprite_index = spr_swingright;}
+		sprite_index = spr_swingright;
+	
+	}
 	else{
-		sprite_index = spr_walkright;}
-		 
-			sprite_index = spr_swingleft;
-			else{  
-				sprite_index = spr_walkleft;}
+		sprite_index = spr_walkright;
+	}
+}
+
+if (keyboard_check(vk_left)) {
+	if (attacking){
+		sprite_index = spr_swingleft;
+		}
+		else{  
+			sprite_index = spr_walkleft;
+		}
+}
+
+if (keyboard_check(vk_up)) {
+		if(attacking){
+			sprite_index = spr_swingup;}
+			else{
+				sprite_index = spr_walkup;}
+}		
 				
-    x += my_speed; // Move right
-} else if (keyboard_check(vk_left)) {
-    sprite_index = spr_walkleft;
-    x -= my_speed; // Move left
-} else if (keyboard_check(vk_up)) {
-    sprite_index = spr_walkup;
-    y -= my_speed; // Move up
-} else if (keyboard_check(vk_down)) {
-    sprite_index = spr_walkdown;
-    y += my_speed; // Move down
-} else {
-    sprite_index = spr_idle; // Set idle sprite
+if (keyboard_check(vk_down)) {
+	if(attacking){
+		sprite_index = spr_swingdown;
+	}
+	else{
+		sprite_index = spr_walkdown;
+	}
 }
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
