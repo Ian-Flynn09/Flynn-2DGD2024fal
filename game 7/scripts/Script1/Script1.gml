@@ -10,17 +10,15 @@ function play_sound(times)
 	/// @DnDVersion : 1
 	/// @DnDHash : 36153923
 	/// @DnDParent : 19B1503A
-	/// @DnDArgument : "code" "/// @description Execute Code$(13_10)for(var i=0; i<times; i++){ $(13_10)audio_play_sound(snd_bell),1,false$(13_10)}$(13_10)$(13_10)for(var i=1 i<times; i++){$(13_10)	audio_play_sound(snd_bell),2,false$(13_10)}$(13_10)$(13_10){$(13_10)	$(13_10)}$(13_10)$(13_10)"
+	/// @DnDArgument : "code" "/// @description Execute Code$(13_10)audio_play_sound(snd_bell,1,false)$(13_10)$(13_10)if times == 2{$(13_10)	alarm[1] = room_speed;$(13_10)}$(13_10)$(13_10)if times == 3{$(13_10)	alarm[2] = room_speed * 2;$(13_10)}$(13_10)"
 	/// @description Execute Code
-	for(var i=0; i<times; i++){ 
-	audio_play_sound(snd_bell),1,false
+	audio_play_sound(snd_bell,1,false)
+	
+	if times == 2{
+		alarm[1] = room_speed;
 	}
 	
-	for(var i=1 i<times; i++){
-		audio_play_sound(snd_bell),2,false
-	}
-	
-	{
-		
+	if times == 3{
+		alarm[2] = room_speed * 2;
 	}
 }

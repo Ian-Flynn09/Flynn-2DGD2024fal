@@ -67,15 +67,33 @@ else
 			/// @DnDVersion : 1
 			/// @DnDHash : 72D35BF7
 			/// @DnDParent : 3E2300CE
-			variable = 0;
+			/// @DnDArgument : "expr" "true"
+			/// @DnDArgument : "var" "sound_1"
+			sound_1 = true;
 		
-			/// @DnDAction : YoYo Games.Common.Function_Call
-			/// @DnDVersion : 1
-			/// @DnDHash : 35ED20AB
+			/// @DnDAction : YoYo Games.Audio.Play_Audio
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 2A7554CA
 			/// @DnDParent : 3E2300CE
-			/// @DnDArgument : "function" "play_sound"
-			/// @DnDArgument : "arg" "1"
-			play_sound(1);
+			/// @DnDArgument : "soundid" "snd_bell"
+			/// @DnDSaveInfo : "soundid" "snd_bell"
+			audio_play_sound(snd_bell, 0, 0, 1.0, undefined, 1.0);
+		
+			/// @DnDAction : YoYo Games.Instances.Set_Alarm
+			/// @DnDVersion : 1
+			/// @DnDHash : 0E5A8DA6
+			/// @DnDParent : 3E2300CE
+			/// @DnDArgument : "steps" "room_speed"
+			/// @DnDArgument : "alarm" "1"
+			alarm_set(1, room_speed);
+		
+			/// @DnDAction : YoYo Games.Instances.Set_Alarm
+			/// @DnDVersion : 1
+			/// @DnDHash : 7FAC1DD4
+			/// @DnDParent : 3E2300CE
+			/// @DnDArgument : "steps" "room_speed*2"
+			/// @DnDArgument : "alarm" "2"
+			alarm_set(2, room_speed*2);
 		}
 	}
 
@@ -101,6 +119,42 @@ else
 			draw_set_colour($FF000096 & $ffffff);
 			var l1D58C8E8_0=($FF000096 >> 24);
 			draw_set_alpha(l1D58C8E8_0 / $ff);
+		}
+	
+		/// @DnDAction : YoYo Games.Common.Else
+		/// @DnDVersion : 1
+		/// @DnDHash : 01055AD5
+		/// @DnDParent : 31920AAD
+		else
+		{
+			/// @DnDAction : YoYo Games.Common.If_Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 12473A3B
+			/// @DnDParent : 01055AD5
+			/// @DnDArgument : "var" "time_limit"
+			if(time_limit == 0)
+			{
+				/// @DnDAction : YoYo Games.Drawing.Draw_Value
+				/// @DnDVersion : 1
+				/// @DnDHash : 13B9D007
+				/// @DnDParent : 12473A3B
+				/// @DnDArgument : "x_relative" "1"
+				/// @DnDArgument : "y_relative" "1"
+				/// @DnDArgument : "caption" "" Game Over :( ""
+				/// @DnDArgument : "var" "0"
+				draw_text(x + 0, y + 0, string(" Game Over :( ") + string(0));
+			
+				/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+				/// @DnDVersion : 1
+				/// @DnDHash : 525A8C1F
+				/// @DnDParent : 12473A3B
+				instance_destroy();
+			
+				/// @DnDAction : YoYo Games.Audio.Play_Audio
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 046C3A3C
+				/// @DnDParent : 12473A3B
+			}
 		}
 	}
 }

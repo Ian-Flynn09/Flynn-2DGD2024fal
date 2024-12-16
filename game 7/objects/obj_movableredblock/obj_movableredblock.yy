@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_door",
+  "%Name":"obj_movableredblock",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_door",
+  "name":"obj_movableredblock",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_door",
-    "path":"sprites/spr_door/spr_door.yy",
+    "name":"spr_box_moveable_r",
+    "path":"sprites/spr_box_moveable_r/spr_box_moveable_r.yy",
   },
   "spriteMaskId":null,
   "visible":true,
