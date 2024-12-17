@@ -14,6 +14,13 @@ draw_set_font(Font2);
 /// @DnDArgument : "var" "time_limit"
 draw_text(x + 0, y + 0, string("Time Limit: ") + string(time_limit));
 
+/// @DnDAction : YoYo Games.Drawing.Draw_Value
+/// @DnDVersion : 1
+/// @DnDHash : 279A0CF6
+/// @DnDArgument : "caption" ""Round: ""
+/// @DnDArgument : "var" "1"
+draw_text(0, 0, string("Round: ") + string(1));
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 077A5CAD
