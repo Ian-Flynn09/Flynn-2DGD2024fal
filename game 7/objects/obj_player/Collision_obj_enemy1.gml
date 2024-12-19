@@ -10,12 +10,12 @@ if(invincible == false)
 	/// @DnDHash : 1B29096C
 	/// @DnDInput : 2
 	/// @DnDParent : 720F6C76
-	/// @DnDArgument : "expr" "-10"
+	/// @DnDArgument : "expr" "-20"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "expr_1" "true"
 	/// @DnDArgument : "var" "health"
 	/// @DnDArgument : "var_1" "invincible"
-	health += -10;
+	health += -20;
 	invincible = true;
 
 	/// @DnDAction : YoYo Games.Instances.Set_Alarm

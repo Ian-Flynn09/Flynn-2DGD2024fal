@@ -1,8 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 7A5071F9
-/// @DnDArgument : "code" "// Prioritize attack animation if attacking$(13_10)if (attacking) {$(13_10)    if (keyboard_check(vk_right)) {$(13_10)        sprite_index = spr_swingright;$(13_10)    } else if (keyboard_check(vk_left)) {$(13_10)        sprite_index = spr_swingleft;$(13_10)    } else if (keyboard_check(vk_up)) {$(13_10)        sprite_index = spr_swingup;$(13_10)    } else if (keyboard_check(vk_down)) {$(13_10)        sprite_index = spr_swingdown;$(13_10)    }$(13_10)    // No movement while attacking$(13_10)    exit; // Exit this event to prevent movement from overriding attack$(13_10)}$(13_10)$(13_10)// Movement logic$(13_10)var moving = false; // Track whether the player is moving$(13_10)$(13_10)if (keyboard_check(vk_right)) {$(13_10)    sprite_index = spr_walkright;$(13_10)    x += my_speed; // Move character to the right$(13_10)    moving = true; // Player is moving$(13_10)} else if (keyboard_check(vk_left)) {$(13_10)    sprite_index = spr_walkleft;$(13_10)    x -= my_speed; // Move character to the left$(13_10)    moving = true; // Player is moving$(13_10)} else if (keyboard_check(vk_up)) {$(13_10)    sprite_index = spr_walkup;$(13_10)    y -= my_speed; // Move character upward$(13_10)    moving = true; // Player is moving$(13_10)} else if (keyboard_check(vk_down)) {$(13_10)    sprite_index = spr_walkdown;$(13_10)    y += my_speed; // Move character downward$(13_10)    moving = true; // Player is moving$(13_10)}$(13_10)$(13_10)// If no keys are pressed, revert to idle animation$(13_10)if (!moving) {$(13_10)    sprite_index = spr_idle; // Replace spr_idle with your actual idle sprite$(13_10)}$(13_10)$(13_10)// Spacebar to trigger attack$(13_10)if (keyboard_check_pressed(vk_space)) {$(13_10)    attacking = true;$(13_10)    alarm[0] = 30; // Set an alarm to end the attack (adjust 30 for desired duration)$(13_10)}$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)"
-// Prioritize attack animation if attacking
+/// @DnDArgument : "code" "if (attacking) {$(13_10)    if (keyboard_check(vk_right)) {$(13_10)        sprite_index = spr_swingright;$(13_10)    } else if (keyboard_check(vk_left)) {$(13_10)        sprite_index = spr_swingleft;$(13_10)    } else if (keyboard_check(vk_up)) {$(13_10)        sprite_index = spr_swingup;$(13_10)    } else if (keyboard_check(vk_down)) {$(13_10)        sprite_index = spr_swingdown;$(13_10)    }$(13_10)    exit; // Prevent movement while attacking$(13_10)}$(13_10)$(13_10)var moving = false;$(13_10)$(13_10)if (keyboard_check(vk_right)) {$(13_10)    sprite_index = spr_walkright;$(13_10)    x += my_speed;$(13_10)    moving = true;$(13_10)} else if (keyboard_check(vk_left)) {$(13_10)    sprite_index = spr_walkleft;$(13_10)    x -= my_speed;$(13_10)    moving = true;$(13_10)} else if (keyboard_check(vk_up)) {$(13_10)    sprite_index = spr_walkup;$(13_10)    y -= my_speed;$(13_10)    moving = true;$(13_10)} else if (keyboard_check(vk_down)) {$(13_10)    sprite_index = spr_walkdown;$(13_10)    y += my_speed;$(13_10)    moving = true;$(13_10)}$(13_10)$(13_10)if (!moving) {$(13_10)    sprite_index = spr_idle;$(13_10)}$(13_10)$(13_10)if (keyboard_check_pressed(vk_space)) {$(13_10)    attacking = true;$(13_10)    alarm[0] = 30; // Attack lasts for 30 steps$(13_10)$(13_10)    // Check for collision with an enemy or boss$(13_10)    var enemy = instance_place(x, y, obj_enemy1); // Check for collision with regular enemies$(13_10)    var boss = instance_place(x, y, obj_boss);   // Check for collision with the boss$(13_10)$(13_10)    if (enemy != noone) { // If a collision with an enemy is detected$(13_10)        enemy.hp -= 10; // Reduce enemy health$(13_10)        show_debug_message("Enemy hit! Remaining HP: " + string(enemy.hp));$(13_10)$(13_10)        if (enemy.hp <= 0) {$(13_10)            instance_destroy(enemy); // Destroy enemy if health is 0 or less$(13_10)            show_debug_message("Enemy defeated!");$(13_10)        }$(13_10)    } else if (boss != noone) { // If a collision with the boss is detected$(13_10)        boss.hp -= 10; // Reduce boss health$(13_10)        show_debug_message("Boss hit! Remaining HP: " + string(boss.hp));$(13_10)$(13_10)        if (boss.hp <= 0) {$(13_10)            // Create the key at the boss's position$(13_10)            instance_create_layer(boss.x, boss.y, "Instances", obj_key);$(13_10)$(13_10)            instance_destroy(boss); // Destroy boss if health is 0 or less$(13_10)            show_debug_message("Boss defeated! Key created.");$(13_10)        }$(13_10)    } else {$(13_10)        show_debug_message("No enemy or boss detected.");$(13_10)    }$(13_10)}$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)"
 if (attacking) {
     if (keyboard_check(vk_right)) {
         sprite_index = spr_swingright;
@@ -13,40 +12,63 @@ if (attacking) {
     } else if (keyboard_check(vk_down)) {
         sprite_index = spr_swingdown;
     }
-    // No movement while attacking
-    exit; // Exit this event to prevent movement from overriding attack
+    exit; // Prevent movement while attacking
 }
 
-// Movement logic
-var moving = false; // Track whether the player is moving
+var moving = false;
 
 if (keyboard_check(vk_right)) {
     sprite_index = spr_walkright;
-    x += my_speed; // Move character to the right
-    moving = true; // Player is moving
+    x += my_speed;
+    moving = true;
 } else if (keyboard_check(vk_left)) {
     sprite_index = spr_walkleft;
-    x -= my_speed; // Move character to the left
-    moving = true; // Player is moving
+    x -= my_speed;
+    moving = true;
 } else if (keyboard_check(vk_up)) {
     sprite_index = spr_walkup;
-    y -= my_speed; // Move character upward
-    moving = true; // Player is moving
+    y -= my_speed;
+    moving = true;
 } else if (keyboard_check(vk_down)) {
     sprite_index = spr_walkdown;
-    y += my_speed; // Move character downward
-    moving = true; // Player is moving
+    y += my_speed;
+    moving = true;
 }
 
-// If no keys are pressed, revert to idle animation
 if (!moving) {
-    sprite_index = spr_idle; // Replace spr_idle with your actual idle sprite
+    sprite_index = spr_idle;
 }
 
-// Spacebar to trigger attack
 if (keyboard_check_pressed(vk_space)) {
     attacking = true;
-    alarm[0] = 30; // Set an alarm to end the attack (adjust 30 for desired duration)
+    alarm[0] = 30; // Attack lasts for 30 steps
+
+    // Check for collision with an enemy or boss
+    var enemy = instance_place(x, y, obj_enemy1); // Check for collision with regular enemies
+    var boss = instance_place(x, y, obj_boss);   // Check for collision with the boss
+
+    if (enemy != noone) { // If a collision with an enemy is detected
+        enemy.hp -= 10; // Reduce enemy health
+        show_debug_message("Enemy hit! Remaining HP: " + string(enemy.hp));
+
+        if (enemy.hp <= 0) {
+            instance_destroy(enemy); // Destroy enemy if health is 0 or less
+            show_debug_message("Enemy defeated!");
+        }
+    } else if (boss != noone) { // If a collision with the boss is detected
+        boss.hp -= 10; // Reduce boss health
+        show_debug_message("Boss hit! Remaining HP: " + string(boss.hp));
+
+        if (boss.hp <= 0) {
+            // Create the key at the boss's position
+            instance_create_layer(boss.x, boss.y, "Instances", obj_key);
+
+            instance_destroy(boss); // Destroy boss if health is 0 or less
+            show_debug_message("Boss defeated! Key created.");
+        }
+    } else {
+        show_debug_message("No enemy or boss detected.");
+    }
 }
 
 /// @DnDAction : YoYo Games.Common.Execute_Code

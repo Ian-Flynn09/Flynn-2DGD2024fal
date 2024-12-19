@@ -7,7 +7,7 @@
 /// @DnDArgument : "expr_2" "false"
 /// @DnDArgument : "expr_3" ""down""
 /// @DnDArgument : "expr_5" "true"
-/// @DnDArgument : "expr_6" "100"
+/// @DnDArgument : "expr_6" "200"
 /// @DnDArgument : "expr_7" "false"
 /// @DnDArgument : "var" "my_speed"
 /// @DnDArgument : "var_1" "has_key"
@@ -23,5 +23,5 @@ attacking  = false;
 my_direction  = "down";
 my_image_speed = 0;
 on = true;
-health = 100;
+health = 200;
 invincible = false;

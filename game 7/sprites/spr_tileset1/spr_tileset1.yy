@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_tileset1",
   "bboxMode":0,
-  "bbox_bottom":679,
+  "bbox_bottom":1359,
   "bbox_left":0,
-  "bbox_right":687,
+  "bbox_right":1375,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":680,
+  "height":1360,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"2092d30f-4cd3-4eae-a2c9-2be867c6b764","blendMode":0,"displayName":"default","isLocked":false,"name":"2092d30f-4cd3-4eae-a2c9-2be867c6b764","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":688,
+  "width":1376,
 }
