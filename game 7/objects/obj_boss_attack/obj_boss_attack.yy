@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_box_moveable_r",
-    "path":"sprites/spr_box_moveable_r/spr_box_moveable_r.yy",
+    "name":"spr_fireball",
+    "path":"sprites/spr_fireball/spr_fireball.yy",
   },
   "spriteMaskId":null,
   "visible":true,
